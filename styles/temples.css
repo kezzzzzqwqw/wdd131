@@ -60,12 +60,14 @@ header h1 {
     content: "X";
 }
 
-.navigation {
+nav {
     display: flex;
     max-width: 800px;
     margin: 0 auto;
     background-color: var(--primary-color);
 }
+
+    
 
 .navigation ul {
     list-style: none;
