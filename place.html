@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philippines</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script defer src="scripts/place.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Philippines</h1>
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <source media="(max-width: 600px)" srcset="images/philippines-small.webp">
+
+                <source media="(max-width: 1200px)" srcset="images/philippines-medium.webp">
+
+                <img src="images/philippines-large.webp" alt="El Nido, Palawan, Philippines">
+            </picture>
+        </section>
+
+        <section class="data">
+            <h2>Data</h2>
+            <ul>
+                <li><strong>Capital:</strong> Manila</li>
+                <li><strong>Languages:</strong> Filipino, English</li>
+                <li><strong>Currency:</strong> Philippine Peso</li>
+                <li><strong>Time Zone:</strong> UTC+8</li>
+                <li><strong>Calling Code:</strong> +63</li>
+                <li><strong>Internet TLD:</strong> .ph</li>
+            </ul>
+        </section>
+
+        <section class="weather">
+            <div class="weather-header">
+                <h2>Weather</h2>
+                <img class="weather-icon-mobile" src="images/weather-icon.svg" alt="Partly cloudy icon">
+            </div>
+
+            <ul>
+                <li><strong>Temperature:</strong> 10°C</li>
+                <li><strong>Conditions:</strong> Partly Cloudy</li>
+                <li><strong>Wind:</strong> 5 km/h</li>
+                <li><strong>Wind Chill:</strong> 9.8°C</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+    <p>
+        &copy; <span id="currentyear"></span> Kezia Aparri | Philippines
+    </p>
+
+    <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>

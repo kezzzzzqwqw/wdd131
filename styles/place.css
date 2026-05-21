@@ -1,0 +1,123 @@
+:root {
+    --primary-blue: #0038A8;
+    --primary-red: #CE1126;
+    --accent-yellow: #FCD116;
+
+    --white: #ffffff;
+    --text-dark: #1E1E1E;
+    --bg-light: #f5f7fa;
+
+    --heading-font: "Merriweather", serif;
+    --body-font: "Open Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    background: var(--bg-light);
+    color: var(--text-dark);
+}
+
+header {
+    background: var(--primary-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    font-family: var(--heading-font);
+}
+
+.hero picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.data,
+.weather {
+    background: var(--white);
+    margin: 1rem;
+    padding: 1rem;
+    border-left: 6px solid var(--primary-red);
+    border-top: 4px solid var(--accent-yellow);
+    border-radius: 6px;
+}
+
+h2 {
+    margin-top: 0;
+    color: var(--primary-blue);
+    font-family: var(--heading-font);
+    border-bottom: 2px solid var(--accent-yellow);
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.weather-icon-mobile {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+}
+
+.weather-icon-desktop {
+    display: none;
+}
+
+.weather-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--primary-blue);
+    color: var(--white);
+}
+
+@media (min-width: 600px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "hero hero"
+            "data weather";
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .hero {
+        grid-area: hero;
+    }
+
+    .data {
+        grid-area: data;
+    }
+
+    .weather {
+        grid-area: weather;
+    }
+
+    .weather-icon-mobile {
+        display: none;
+    }
+
+    .weather h2::after {
+        content: " ⛅";
+        font-size: 1.2rem;
+        margin-left: 0.3rem;
+        color: var(--accent-yellow);
+    }
+}
