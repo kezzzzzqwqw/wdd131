@@ -1,0 +1,168 @@
+:root {
+    --primary-color: #0F0E47;
+    --secondary-color: #272757;
+    --accent-color: #505081;
+    --light-accent: #8686AC;
+
+    --text-dark: #111111;
+    --text-light: #FFFFFF;
+
+    --background-color: #F5F5F5;
+
+    --heading-font: "Merriweather", serif;
+    --body-font: "Open Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--background-color);
+}
+
+header {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 1rem;
+}
+
+header h1 {
+    font-family: var(--heading-font);
+    color: var(--text-light);
+    font-size: 1.5rem;
+}
+
+
+#menu {
+    font-size: 2rem;
+    border: 0;
+    background: none;
+    color: var(--text-light);
+    cursor: pointer;
+
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "X";
+}
+
+nav {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--primary-color);
+}
+
+    
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation.open li {
+    display: block;
+}
+
+.navigation a {
+    display: block;
+    color: var(--text-light);
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    background-color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+main h2 {
+    text-align: center;
+    margin: 1rem 0;
+}
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+}
+
+footer {
+    max-width: 800px;
+    margin: 2rem auto 0;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1rem;
+    font-family: var(--body-font);
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+
+.active::before {
+    content: "📍";
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.gallery section {
+    background: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,.15);
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.gallery h3 {
+    margin: 1rem 0 0.5rem;
+}
+
+.gallery p {
+    margin: 0.3rem 1rem;
+}
