@@ -120,6 +120,13 @@ ul li {
   margin-bottom: 0.5rem;
 }
 
+.swatch-primary      { background: #0F0E47; }
+.swatch-secondary    { background: #272757; }
+.swatch-accent       { background: #505081; }
+.swatch-light-accent { background: #8686AC; }
+.swatch-background   { background: #F5F5F5; border: 1px solid #ccc; }
+.swatch-text-dark    { background: #111111; }
+
 .color-card p { margin: 0.15rem 0; }
 
 /* ── Typography Examples ── */
