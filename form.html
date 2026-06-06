@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Kezia Aparri" />
+  <meta name="description" content="Submit a product review for Cosmic Horizons space and astronomy equipment." />
+  <title>Product Review – Cosmic Horizons</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/form.css" />
+  <script src="scripts/form.js" defer></script>
+  
+</head>
+<body>
+
+  <header>
+    <h1>Product Review</h1>
+  </header>
+
+  <main>
+    <section class="form-section">
+
+      <form method="get" action="review.html">
+
+        <div class="field-group">
+          <label for="product-name">Product Name</label>
+          <select id="product-name" name="productName" required>
+            <option value="" disabled selected>Choose a Product ...</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <fieldset class="rating-fieldset">
+            <legend>Overall Rating</legend>
+            <div class="star-rating">
+              <div class="star-option">
+                <label for="star1">&#9734;</label>
+                <input type="radio" id="star1" name="rating" value="1" required />
+              </div>
+              <div class="star-option">
+                <label for="star2">&#9734;&#9734;</label>
+                <input type="radio" id="star2" name="rating" value="2" />
+              </div>
+              <div class="star-option">
+                <label for="star3">&#9734;&#9734;&#9734;</label>
+                <input type="radio" id="star3" name="rating" value="3" />
+              </div>
+              <div class="star-option">
+                <label for="star4">&#9734;&#9734;&#9734;&#9734;</label>
+                <input type="radio" id="star4" name="rating" value="4" />
+              </div>
+              <div class="star-option">
+                <label for="star5">&#9734;&#9734;&#9734;&#9734;&#9734;</label>
+                <input type="radio" id="star5" name="rating" value="5" />
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="field-group">
+          <label for="install-date">Date of Installation</label>
+          <input type="date" id="install-date" name="installDate" required />
+        </div>
+
+        <div class="field-group">
+          <fieldset class="checkbox-fieldset">
+            <legend>Which features did you find useful in the product?<br /><em>(Check all that apply)</em></legend>
+
+            <div class="checkbox-group">
+              <input type="checkbox" id="feature-durability" name="features" value="Durability" />
+              <label for="feature-durability">Durability</label>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" id="feature-ease" name="features" value="Ease of Use" />
+              <label for="feature-ease">Ease of Use</label>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" id="feature-performance" name="features" value="Performance" />
+              <label for="feature-performance">Performance</label>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" id="feature-design" name="features" value="Design" />
+              <label for="feature-design">Design</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="field-group">
+          <label for="written-review">Written Review <span class="optional">(Optional)</span></label>
+          <textarea id="written-review" name="writtenReview" rows="5"></textarea>
+        </div>
+
+        <div class="field-group">
+          <label for="username">Your Name <span class="optional">(Optional)</span></label>
+          <input type="text" id="username" name="userName" />
+        </div>
+
+        <div class="field-group">
+          <input type="submit" value="Post Review" />
+        </div>
+
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>
+        &copy; <span id="currentyear"></span> Kezia Aparri | Philippines
+    </p>
+
+    <p id="lastModified"></p>
+  </footer>
+
+</body>
+</html>
