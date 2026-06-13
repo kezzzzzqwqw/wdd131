@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Kezia Aparri" />
+  <meta name="description" content="Test your astronomy knowledge with the Cosmic Horizons quiz — 8 questions about planets, stars, galaxies, and space exploration." />
+  <title>Quiz – Cosmic Horizons</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a href="index.html" class="logo-link" aria-label="Cosmic Horizons home">
+        <span class="logo-icon" aria-hidden="true">✦</span>
+        <span class="logo-text">Cosmic <span>Horizons</span></span>
+      </a>
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-links" id="primary-nav" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <section class="hero" style="padding: 3rem 1.25rem 2.5rem;" aria-label="Quiz page banner">
+      <div class="hero-stars" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Astronomy Challenge</p>
+        <h1>The <em>Cosmic Quiz</em></h1>
+        <p class="hero-sub">Eight questions across planets, stars, galaxies, and space exploration. Your results are saved locally to track progress.</p>
+      </div>
+    </section>
+
+    <!-- QUIZ SECTION -->
+    <section class="section section-dark" aria-labelledby="quiz-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Test Your Knowledge</span>
+          <h2 id="quiz-heading">How Well Do You Know the Universe?</h2>
+        </div>
+
+        <div class="quiz-wrap">
+
+          <!-- Progress -->
+          <div class="quiz-progress-bar-wrap" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Quiz progress">
+            <div id="quiz-progress-bar"></div>
+          </div>
+          <p id="quiz-question-num" aria-live="polite"></p>
+
+          <!-- Quiz Main -->
+          <div id="quiz-main">
+            <p id="quiz-question" aria-live="polite"></p>
+
+            <div class="quiz-options" id="quiz-options" role="group" aria-label="Answer choices">
+              <!-- Options injected by JS -->
+            </div>
+
+            <p id="quiz-feedback" aria-live="assertive" role="alert"></p>
+
+            <div class="quiz-footer">
+              <span id="quiz-score-display" aria-live="polite"></span>
+              <div style="display:flex; gap: 0.75rem; flex-wrap:wrap;">
+                <button id="quiz-reset" class="btn btn-outline" style="padding:0.55rem 1.2rem; font-size:0.85rem;">Restart</button>
+                <button id="quiz-next"  class="btn btn-primary" style="padding:0.55rem 1.4rem;">Next →</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Result Screen -->
+          <div id="quiz-result" hidden aria-live="polite">
+            <h3>Quiz Complete!</h3>
+            <span id="result-score"></span>
+            <p id="result-msg"></p>
+            <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+              <button id="quiz-retry" class="btn btn-primary">Try Again</button>
+              <a href="explore.html" class="btn btn-outline">Explore More</a>
+            </div>
+          </div>
+
+          <!-- Quiz History -->
+          <div class="quiz-history" aria-labelledby="history-heading">
+            <h3 id="history-heading">Your Recent Attempts</h3>
+            <ul id="history-list" aria-label="Past quiz scores">
+              <!-- Populated by JS from localStorage -->
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW TO IMPROVE -->
+    <section class="section section-darker" aria-labelledby="improve-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Keep Learning</span>
+          <h2 id="improve-heading">Boost Your Score</h2>
+          <p>Not happy with your result? Revisit the Explore page to brush up on each topic.</p>
+        </div>
+        <div class="topic-grid">
+          <a href="explore.html?filter=planet" class="topic-card" aria-label="Review planets">
+            <img src="images/saturn.jpg" alt="Saturn with its ring system" class="topic-card-img" loading="lazy" width="400" height="225" />
+            <div class="topic-card-body">
+              <h3>Review Planets</h3>
+              <p>Learn key facts about each planet — size, moons, orbital period, and what makes it unique.</p>
+              <span class="card-link">Go to Planets →</span>
+            </div>
+          </a>
+          <a href="explore.html?filter=star" class="topic-card" aria-label="Review stars">
+            <img src="images/hubble-view-stars.jpg" alt="Hubble Deep Field image unveils myriad galaxies back to the beginning of time" class="topic-card-img" loading="lazy" width="400" height="225" />
+            <div class="topic-card-body">
+              <h3>Review Stars</h3>
+              <p>Understand stellar classification, luminosity, and the life cycle of different star types.</p>
+              <span class="card-link">Go to Stars →</span>
+            </div>
+          </a>
+          <a href="explore.html?filter=exploration" class="topic-card" aria-label="Review space exploration">
+            <img src="images/voyager.jpg" alt="Artist concept of voyager" class="topic-card-img" loading="lazy" width="400" height="225" />
+            <div class="topic-card-body">
+              <h3>Review Exploration</h3>
+              <p>Revisit humanity's greatest missions — from the first Moon landing to deep-space telescopes.</p>
+              <span class="card-link">Go to Missions →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>✦ Cosmic Horizons</h3>
+        <p>An educational astronomy resource bringing the wonders of the universe to curious minds everywhere.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="references.html">References</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact">
+        <h4>About</h4>
+        <p>Created by Kezia Aparri<br />WDD 131 &ndash; Web Frontend Development I<br />BYU&ndash;Idaho</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy;<span class="footer-year"></span> Kezia Aparri &mdash; WDD 131</p>
+      <a href="references.html">References</a>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

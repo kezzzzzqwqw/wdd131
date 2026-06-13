@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Kezia Aparri" />
+  <meta name="description" content="Explore planets, stars, galaxies, and space exploration missions in the Cosmic Horizons database." />
+  <title>Explore – Cosmic Horizons</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a href="index.html" class="logo-link" aria-label="Cosmic Horizons home">
+        <span class="logo-icon" aria-hidden="true">✦</span>
+        <span class="logo-text">Cosmic <span>Horizons</span></span>
+      </a>
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-links" id="primary-nav" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <section class="hero" style="padding: 3rem 1.25rem 2.5rem;" aria-label="Explore page banner">
+      <div class="hero-stars" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">The Cosmic Database</p>
+        <h1>Explore <em>Space Objects</em></h1>
+        <p class="hero-sub">Browse planets, stars, galaxies, and exploration missions. Filter by category to dive deeper.</p>
+      </div>
+    </section>
+
+    <!-- OBJECT BROWSER -->
+    <section class="section section-dark" aria-labelledby="explore-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Interactive Catalog</span>
+          <h2 id="explore-heading">Space Objects</h2>
+          <p>Use the filters below to browse by category.</p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar" role="group" aria-label="Filter space objects by category">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" data-filter="planet" aria-pressed="false">🪐 Planets</button>
+          <button class="filter-btn" data-filter="star" aria-pressed="false">⭐ Stars</button>
+          <button class="filter-btn" data-filter="galaxy" aria-pressed="false">🌌 Galaxies</button>
+          <button class="filter-btn" data-filter="exploration" aria-pressed="false">🚀 Exploration</button>
+        </div>
+
+        <!-- Cards Grid (populated by JS) -->
+        <div class="objects-grid" id="objects-grid" aria-live="polite" aria-label="Space objects grid">
+          <!-- Cards injected by main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- DID YOU KNOW SECTION -->
+    <section class="section section-darker" aria-labelledby="didyouknow-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Quick Facts</span>
+          <h2 id="didyouknow-heading">Did You Know?</h2>
+        </div>
+
+        <div class="topic-grid">
+          <div class="topic-card" style="text-decoration:none; cursor:default;">
+            <img src="images/black-hole.jpg" alt="Best-ever snapshot of a Black Hole's jets" class="topic-card-img" loading="lazy" width="400" height="225" />
+            <div class="topic-card-body">
+              <h3>Black Holes</h3>
+              <p>A black hole's gravity is so extreme that not even light can escape once it crosses the event horizon. The nearest known black hole, Gaia BH1, is just 1,560 light-years away.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" style="text-decoration:none; cursor:default;">
+            <img src="images/comet.jpg" alt="A bright comet with a glowing tail streaking across a starry sky" class="topic-card-img" loading="lazy" width="400" height="225" />
+            <div class="topic-card-body">
+              <h3>Comets</h3>
+              <p>Comets are icy bodies that form a bright coma and tail as they approach the Sun. Halley's Comet, visible roughly every 75 years, has been observed since at least 240 BCE.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" style="text-decoration:none; cursor:default;">
+            <img src="images/nebulae.jpg" alt="Glowing pink and blue star-forming nebulae surrounded by a dense field of stars" class="topic-card-img" loading="lazy" width="400" height="225" />
+            <div class="topic-card-body">
+              <h3>Nebulae</h3>
+              <p>Nebulae are vast clouds of gas and dust — the birthplaces of stars. The Orion Nebula, visible to the naked eye, is one of the most studied star-forming regions in the sky.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="section section-dark" aria-labelledby="nl2-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Stay Connected</span>
+          <h2 id="nl2-heading">Want More Space Updates?</h2>
+          <p>Sign up on our home page to receive astronomy highlights and mission news.</p>
+        </div>
+        <div class="text-center">
+          <a href="index.html#newsletter-form" class="btn btn-primary">Sign Up on Home Page</a>
+          <a href="quiz.html" class="btn btn-outline" style="margin-left:1rem;">Try the Quiz</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>✦ Cosmic Horizons</h3>
+        <p>An educational astronomy resource bringing the wonders of the universe to curious minds everywhere.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="references.html">References</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact">
+        <h4>About</h4>
+        <p>Created by Kezia Aparri<br />WDD 131 &ndash; Web Frontend Development I<br />BYU&ndash;Idaho</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy;<span class="footer-year"></span> Kezia Aparri &mdash; WDD 131</p>
+      <a href="references.html">References</a>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

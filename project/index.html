@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Kezia Aparri" />
+  <meta name="description" content="Cosmic Horizons – your guide to the universe. Explore planets, stars, galaxies, and space exploration milestones." />
+  <title>Cosmic Horizons – Explore the Universe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a href="index.html" class="logo-link" aria-label="Cosmic Horizons home">
+        <span class="logo-icon" aria-hidden="true">✦</span>
+        <span class="logo-text">Cosmic <span>Horizons</span></span>
+      </a>
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-links" id="primary-nav" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Welcome banner">
+      <div class="hero-stars" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Space &amp; Astronomy</p>
+        <h1>Discover the <em>Infinite Universe</em></h1>
+        <p class="hero-sub">
+          From our cosmic backyard to the edge of the observable universe —
+          explore planets, stars, galaxies, and humanity's greatest adventures in space.
+        </p>
+        <div class="hero-btns">
+          <a href="explore.html" class="btn btn-primary">Start Exploring</a>
+          <a href="quiz.html" class="btn btn-outline">Test Your Knowledge</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FACT TICKER -->
+    <div class="fact-ticker-wrap" aria-label="Space fact of the moment">
+      <p id="fact-display" aria-live="polite"></p>
+      <div class="fact-controls">
+        <button id="fact-prev" aria-label="Previous fact">&#8592; Prev</button>
+        <span id="fact-counter" aria-live="polite"></span>
+        <button id="fact-next" aria-label="Next fact">Next &#8594;</button>
+      </div>
+    </div>
+
+    <!-- TOPIC CARDS -->
+    <section class="section section-dark" aria-labelledby="topics-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">What to Discover</span>
+          <h2 id="topics-heading">Browse the Cosmos</h2>
+          <p>Dive into the key topics that make up our universe — from rocky worlds to distant galaxies.</p>
+        </div>
+
+        <div class="topic-grid">
+          <a href="explore.html?filter=planet" class="topic-card" aria-label="Explore planets">
+            <img src="images/solar-system.jpg" alt="Our Solar System" class="topic-card-img" loading="lazy" width="400" height="225"/>
+            <div class="topic-card-body">
+              <h3>Planets</h3>
+              <p>From the scorching surface of Mercury to the icy reaches of Neptune, discover the eight worlds of our solar system.</p>
+              <span class="card-link">Explore Planets →</span>
+            </div>
+          </a>
+
+          <a href="explore.html?filter=star" class="topic-card" aria-label="Explore stars">
+            <img src="images/stars.jpg" alt="Glowing pink and blue star-forming nebulae surrounded by a dense field of stars" class="topic-card-img" loading="lazy" width="400" height="225"/>
+            <div class="topic-card-body">
+              <h3>Stars</h3>
+              <p>Stars are the engines of the universe — massive balls of plasma that forge the elements of life itself.</p>
+              <span class="card-link">Explore Stars →</span>
+            </div>
+          </a>
+
+          <a href="explore.html?filter=galaxy" class="topic-card" aria-label="Explore galaxies">
+            <img src="images/andromeda-galaxy.jpg" alt="The Andromeda spiral galaxy with its bright core and dust lanes" class="topic-card-img" loading="lazy" width="400" height="225"/> 
+            <div class="topic-card-body">
+              <h3>Galaxies</h3>
+              <p>Vast islands of stars, gas, and dark matter — galaxies are the building blocks of the large-scale universe.</p>
+              <span class="card-link">Explore Galaxies →</span>
+            </div>
+          </a>
+
+          <a href="explore.html?filter=exploration" class="topic-card" aria-label="Explore space missions">
+            <img src="images/spitzer-space-telescope.jpg" alt="Artist's rendering of NASA's Spitzer Space Telescope in space" class="topic-card-img" loading="lazy" width="400" height="225"/> 
+            <div class="topic-card-body">
+              <h3>Space Exploration</h3>
+              <p>From Apollo to the James Webb Space Telescope — celebrate the milestones of human curiosity beyond Earth.</p>
+              <span class="card-link">Explore Missions →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE – SCALE OF THE UNIVERSE -->
+    <section class="section section-darker" aria-labelledby="scale-heading">
+      <div class="container">
+        <div class="feature-split">
+          <div class="feature-text">
+            <span class="section-eyebrow">Perspective</span>
+            <h2 id="scale-heading">How Vast is Space?</h2>
+            <p>
+              The observable universe stretches about 93 billion light-years in diameter.
+              A single light-year — the distance light travels in one year — is roughly
+              9.46 trillion kilometers.
+            </p>
+            <p>
+              Our entire solar system is a tiny speck within the Milky Way, which is itself
+              just one of an estimated two trillion galaxies in the observable universe.
+            </p>
+            <a href="explore.html" class="btn btn-outline mt-2">See Space Objects</a>
+          </div>
+          <div class="feature-img-wrap">
+            <img src="images/milky-way.jpg" alt="The Milky Way galaxy stretching across a dark sky" loading="lazy" width="600" height="450"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE – QUIZ CTA -->
+    <section class="section section-dark" aria-labelledby="quiz-cta-heading">
+      <div class="container">
+        <div class="feature-split reverse">
+          <div class="feature-text">
+            <span class="section-eyebrow">Test Yourself</span>
+            <h2 id="quiz-cta-heading">How Well Do You Know the Universe?</h2>
+            <p>
+              Challenge yourself with our astronomy quiz. Eight questions spanning planets,
+              stars, galaxies, and space exploration history. Can you score a perfect ten?
+            </p>
+            <p>
+              Your results are saved locally so you can track your improvement over time.
+            </p>
+            <a href="quiz.html" class="btn btn-primary mt-2">Take the Quiz</a>
+          </div>
+          <div class="feature-img-wrap">
+          <img src="images/hubble-telescope.jpg" alt="This illustration depicts a side view of the Hubble Space Telescope (HST)." loading="lazy" width="600" height="450"/>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER FORM -->
+    <section class="section section-darker" aria-labelledby="newsletter-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Stay Connected</span>
+          <h2 id="newsletter-heading">Get Cosmic Updates</h2>
+          <p>Sign up to receive astronomy highlights, mission news, and quiz challenges.</p>
+        </div>
+
+        <form id="newsletter-form" class="newsletter-form" novalidate aria-label="Newsletter signup form">
+          <label for="sub-name" class="visually-hidden">Your first name</label>
+          <input
+            type="text"
+            id="sub-name"
+            name="name"
+            placeholder="Your first name"
+            autocomplete="given-name"
+            required
+          />
+          <label for="sub-email" class="visually-hidden">Your email address</label>
+          <input
+            type="email"
+            id="sub-email"
+            name="email"
+            placeholder="your@email.com"
+            autocomplete="email"
+            required
+          />
+          <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+        <p id="form-feedback" aria-live="polite" role="status"></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>✦ Cosmic Horizons</h3>
+        <p>An educational astronomy resource bringing the wonders of the universe to curious minds everywhere.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="references.html">References</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact">
+        <h4>About</h4>
+        <p>Created by Kezia Aparri<br />WDD 131 &ndash; Web Frontend Development I<br />BYU&ndash;Idaho</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy;<span class="footer-year"></span> Kezia Aparri &mdash; WDD 131</p>
+      <a href="references.html">References</a>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
